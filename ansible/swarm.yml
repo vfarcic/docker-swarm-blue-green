@@ -6,8 +6,8 @@
     - common
     - docker
     - docker-compose
-    - registrator
     - consul
     - consul-template
+    - registrator
     - nginx
     - swarm
