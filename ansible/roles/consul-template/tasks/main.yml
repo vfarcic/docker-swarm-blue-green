@@ -1,0 +1,6 @@
+- name: File is copied
+  copy:
+    src: consul-template
+    dest: /usr/local/bin/consul-template
+    mode: 0755
+  tags: [consul-template]

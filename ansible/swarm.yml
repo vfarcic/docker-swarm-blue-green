@@ -8,5 +8,6 @@
     - docker-compose
     - registrator
     - consul
+    - consul-template
     - nginx
     - swarm
