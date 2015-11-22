@@ -1,0 +1,3 @@
+[swarm]
+10.100.192.200 consul_extra="-server -bootstrap -ui-dir /ui" swarm_master=true docker_service=docker-swarm-master.service lb=true
+10.100.192.20[1:2] consul_extra="-join 10.100.192.200" docker_service=docker-swarm-node.service

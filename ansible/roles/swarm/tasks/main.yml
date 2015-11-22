@@ -1,0 +1,16 @@
+- name: Swarm node is running
+  docker:
+    name: swarm-node
+    image: swarm
+    command: join --advertise={{ facter_ipaddress_eth1 }}:2375 consul://{{ facter_ipaddress_eth1 }}:8500/swarm
+  when: not swarm_master is defined
+  tags: [swarm]
+
+- name: Swarm master is running
+  docker:
+    name: swarm-master
+    image: swarm
+    ports: 2375:2375
+    command: manage consul://{{ facter_ipaddress_eth1 }}:8500/swarm
+  when: swarm_master is defined
+  tags: [swarm]
