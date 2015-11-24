@@ -1,3 +1,6 @@
+Blue-Green Deployment to the Docker Swarm Cluster
+=================================================
+
 Prerequisites
 -------------
 
